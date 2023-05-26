@@ -1,0 +1,50 @@
+name: graph-effectful
+version: 0.0.1
+
+language: GHC2021
+
+default-extensions:
+  - BlockArguments
+  - LambdaCase
+  - DataKinds
+  - OverloadedStrings
+  - TemplateHaskell
+  - TypeFamilies
+  - UnicodeSyntax
+  - ViewPatterns
+
+dependencies:
+  - base
+  - containers
+  - effectful
+  - effectful-core
+  - effectful-th
+  - effectful-plugin
+  - vector
+  - text
+
+# -fplugin=Effectful.Plugin does not work with nix+ghc961
+# last 10 log lines:
+#  > installing
+#  > Installing library in /nix/store/fqpahw8wdb4ifw9v7lpcmzz9afa1gxh4-simply-typed-lambda-calculus-0.0.1/lib/ghc-9.6.1/lib/aarch64-linux-ghc-9.6.1/simply-typed-lambda-calculus-0.0.1-FTxeJKJ9BmZBof7n4FP2Yt
+#  > Error: Setup: '/nix/store/mh2j3cyqv98hjvgdcym8gsx9lgjphadm-ghc-9.6.1/bin/ghc'
+#  > exited with an error:
+#  > <command line>: Could not load module ‘Effectful.Plugin’
+#  > It is a member of the hidden package ‘effectful-plugin-1.1.0.1’.
+#  > Perhaps you need to add ‘effectful-plugin’ to the build-depends in your .cabal
+#  > file.
+#  > Use -v (or `:set -v` in ghci) to see a list of the files searched for.
+flags:
+  use-effectful-plugin:
+    manual: True
+    default: False
+
+when:
+  - condition: flag(use-effectful-plugin)
+    ghc-options:
+      - -fplugin=Effectful.Plugin
+
+
+library:
+  source-dirs: lib
+

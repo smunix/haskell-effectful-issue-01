@@ -1,0 +1,42 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:           graph-effectful
+version:        0.0.1
+build-type:     Simple
+
+flag use-effectful-plugin
+  manual: True
+  default: False
+
+library
+  exposed-modules:
+      Graph
+  other-modules:
+      Paths_graph_effectful
+  hs-source-dirs:
+      lib
+  default-extensions:
+      BlockArguments
+      LambdaCase
+      DataKinds
+      OverloadedStrings
+      TemplateHaskell
+      TypeFamilies
+      UnicodeSyntax
+      ViewPatterns
+  build-depends:
+      base
+    , containers
+    , effectful
+    , effectful-core
+    , effectful-plugin
+    , effectful-th
+    , text
+    , vector
+  default-language: GHC2021
+  if flag(use-effectful-plugin)
+    ghc-options: -fplugin=Effectful.Plugin

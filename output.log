@@ -1,0 +1,146 @@
+@nix { "action": "setPhase", "phase": "setupCompilerEnvironmentPhase" }
+setupCompilerEnvironmentPhase
+Build with /nix/store/mh2j3cyqv98hjvgdcym8gsx9lgjphadm-ghc-9.6.1.
+@nix { "action": "setPhase", "phase": "unpackPhase" }
+unpacking sources
+unpacking source archive /nix/store/8rnjbdwq7msmk24yaxz11k455qcnna0r-source
+source root is source
+@nix { "action": "setPhase", "phase": "patchPhase" }
+patching sources
+generated graph-effectful.cabal
+Run jailbreak-cabal to lift version restrictions on build inputs.
+@nix { "action": "setPhase", "phase": "compileBuildDriverPhase" }
+compileBuildDriverPhase
+setupCompileFlags: -package-db=/build/tmp.Sio7ROTZt9/setup-package.conf.d -j5 +RTS -A64M -RTS -threaded -rtsopts
+[1 of 2] Compiling Main             ( /nix/store/4mdp8nhyfddh7bllbi7xszz7k9955n79-Setup.hs, /build/tmp.Sio7ROTZt9/Main.o )
+[2 of 2] Linking Setup
+@nix { "action": "setPhase", "phase": "updateAutotoolsGnuConfigScriptsPhase" }
+updateAutotoolsGnuConfigScriptsPhase
+@nix { "action": "setPhase", "phase": "configurePhase" }
+configuring
+configureFlags: --verbose --prefix=/nix/store/yakk8gipqz9nc8nwrb0wzl2l1m7h3x3b-graph-effectful-0.0.1 --libdir=$prefix/lib/$compiler/lib --libsubdir=$abi/$libname --docdir=/nix/store/qq6i58h3ypn2a66gd30nfa3wxvrnnzpk-graph-effectful-0.0.1-doc/share/doc/graph-effectful-0.0.1 --with-gcc=gcc --package-db=/build/tmp.Sio7ROTZt9/package.conf.d --ghc-options=-j5 +RTS -A64M -RTS --disable-split-objs --disable-library-profiling --disable-profiling --enable-shared --disable-coverage --enable-static --disable-executable-dynamic --disable-tests --disable-benchmarks --enable-library-vanilla --disable-library-for-ghci --ghc-option=-split-sections --ghc-options=-haddock --extra-lib-dirs=/nix/store/g9gbwv05hjdl101hx3l93d6zjzrf7a52-ncurses-6.4/lib --extra-lib-dirs=/nix/store/q56b3pzash39cyvdyvca4c7s7ky1g4jq-libffi-3.4.4/lib --extra-lib-dirs=/nix/store/fh33254hv7i3sl0pf9l5v38za08alsbi-gmp-with-cxx-6.2.1/lib --extra-lib-dirs=/nix/store/mh2j3cyqv98hjvgdcym8gsx9lgjphadm-ghc-9.6.1/lib
+Using Parsec parser
+Configuring graph-effectful-0.0.1...
+Flags chosen: use-effectful-plugin=False
+Dependency base: using base-4.18.0.0
+Dependency containers: using containers-0.6.7
+Dependency effectful: using effectful-2.3.0.0
+Dependency effectful-core: using effectful-core-2.3.0.0
+Dependency effectful-plugin: using effectful-plugin-1.1.0.1
+Dependency effectful-th: using effectful-th-1.0.0.1
+Dependency text: using text-2.0.2
+Dependency vector: using vector-0.12.3.1
+Source component graph: component lib
+Configured component graph:
+    component graph-effectful-0.0.1-CipVLVDYWAYD9ZiDKFrIpU
+        include base-4.18.0.0
+        include containers-0.6.7
+        include effectful-2.3.0.0-AA74P5j9dhz7Ta9gWgtqpS
+        include effectful-core-2.3.0.0-HkDXH9w07tf4k0Po66cR88
+        include effectful-plugin-1.1.0.1-LyAC5jHU7Qi7uBccRblLEe
+        include effectful-th-1.0.0.1-9jv2htH6n3d3vOS3g3QiTx
+        include text-2.0.2
+        include vector-0.12.3.1-DlenZuka4DB5vVzk0BMHXc
+Linked component graph:
+    unit graph-effectful-0.0.1-CipVLVDYWAYD9ZiDKFrIpU
+        include base-4.18.0.0
+        include containers-0.6.7
+        include effectful-2.3.0.0-AA74P5j9dhz7Ta9gWgtqpS
+        include effectful-core-2.3.0.0-HkDXH9w07tf4k0Po66cR88
+        include effectful-plugin-1.1.0.1-LyAC5jHU7Qi7uBccRblLEe
+        include effectful-th-1.0.0.1-9jv2htH6n3d3vOS3g3QiTx
+        include text-2.0.2
+        include vector-0.12.3.1-DlenZuka4DB5vVzk0BMHXc
+        Graph=graph-effectful-0.0.1-CipVLVDYWAYD9ZiDKFrIpU:Graph
+Ready component graph:
+    definite graph-effectful-0.0.1-CipVLVDYWAYD9ZiDKFrIpU
+        depends base-4.18.0.0
+        depends containers-0.6.7
+        depends effectful-2.3.0.0-AA74P5j9dhz7Ta9gWgtqpS
+        depends effectful-core-2.3.0.0-HkDXH9w07tf4k0Po66cR88
+        depends effectful-plugin-1.1.0.1-LyAC5jHU7Qi7uBccRblLEe
+        depends effectful-th-1.0.0.1-9jv2htH6n3d3vOS3g3QiTx
+        depends text-2.0.2
+        depends vector-0.12.3.1-DlenZuka4DB5vVzk0BMHXc
+Using Cabal-3.10.1.0 compiled by ghc-9.6
+Using compiler: ghc-9.6.1
+Using install prefix:
+/nix/store/yakk8gipqz9nc8nwrb0wzl2l1m7h3x3b-graph-effectful-0.0.1
+Executables installed in:
+/nix/store/yakk8gipqz9nc8nwrb0wzl2l1m7h3x3b-graph-effectful-0.0.1/bin
+Libraries installed in:
+/nix/store/yakk8gipqz9nc8nwrb0wzl2l1m7h3x3b-graph-effectful-0.0.1/lib/ghc-9.6.1/lib/aarch64-linux-ghc-9.6.1/graph-effectful-0.0.1-CipVLVDYWAYD9ZiDKFrIpU
+Dynamic Libraries installed in:
+/nix/store/yakk8gipqz9nc8nwrb0wzl2l1m7h3x3b-graph-effectful-0.0.1/lib/ghc-9.6.1/lib/aarch64-linux-ghc-9.6.1
+Private executables installed in:
+/nix/store/yakk8gipqz9nc8nwrb0wzl2l1m7h3x3b-graph-effectful-0.0.1/libexec/aarch64-linux-ghc-9.6.1/graph-effectful-0.0.1
+Data files installed in:
+/nix/store/yakk8gipqz9nc8nwrb0wzl2l1m7h3x3b-graph-effectful-0.0.1/share/aarch64-linux-ghc-9.6.1/graph-effectful-0.0.1
+Documentation installed in:
+/nix/store/qq6i58h3ypn2a66gd30nfa3wxvrnnzpk-graph-effectful-0.0.1-doc/share/doc/graph-effectful-0.0.1
+Configuration files installed in:
+/nix/store/yakk8gipqz9nc8nwrb0wzl2l1m7h3x3b-graph-effectful-0.0.1/etc
+No alex found
+Using ar found on system at:
+/nix/store/4a712xyrnhx451s5rcn4qgzfjznksls6-binutils-2.40/bin/ar
+No c2hs found
+No cpphs found
+No doctest found
+Using gcc version 12.2.0 given by user at:
+/nix/store/i5bpmfxddiqw77vcsnhwyw9kfnb9dw33-gcc-wrapper-12.2.0/bin/gcc
+Using ghc version 9.6.1 found on system at:
+/nix/store/mh2j3cyqv98hjvgdcym8gsx9lgjphadm-ghc-9.6.1/bin/ghc
+Using ghc-pkg version 9.6.1 found on system at:
+/nix/store/mh2j3cyqv98hjvgdcym8gsx9lgjphadm-ghc-9.6.1/bin/ghc-pkg-9.6.1
+No ghcjs found
+No ghcjs-pkg found
+No greencard found
+Using haddock version 2.28.0 found on system at:
+/nix/store/mh2j3cyqv98hjvgdcym8gsx9lgjphadm-ghc-9.6.1/bin/haddock-ghc-9.6.1
+No happy found
+Using haskell-suite found on system at: haskell-suite-dummy-location
+Using haskell-suite-pkg found on system at: haskell-suite-pkg-dummy-location
+No hmake found
+Using hpc version 0.68 found on system at:
+/nix/store/mh2j3cyqv98hjvgdcym8gsx9lgjphadm-ghc-9.6.1/bin/hpc-ghc-9.6.1
+Using hsc2hs version 0.68.9 found on system at:
+/nix/store/mh2j3cyqv98hjvgdcym8gsx9lgjphadm-ghc-9.6.1/bin/hsc2hs-ghc-9.6.1
+Using hscolour version 1.24 found on system at:
+/nix/store/fsbkkpqkli9679iadjznvj14g2agi17p-hscolour-1.24.4/bin/HsColour
+No jhc found
+Using ld found on system at:
+/nix/store/99nk1ys6w5p38zagy1241jsc53c2yrxd-binutils-wrapper-2.40/bin/ld.gold
+No pkg-config found
+Using runghc version 9.6.1 found on system at:
+/nix/store/mh2j3cyqv98hjvgdcym8gsx9lgjphadm-ghc-9.6.1/bin/runghc-9.6.1
+Using strip version 2.40 found on system at:
+/nix/store/i5bpmfxddiqw77vcsnhwyw9kfnb9dw33-gcc-wrapper-12.2.0/bin/strip
+Using tar found on system at:
+/nix/store/jdpskmc9x9a302nyilfmpya702bi7s7g-gnutar-1.34/bin/tar
+No uhc found
+@nix { "action": "setPhase", "phase": "buildPhase" }
+building
+Preprocessing library for graph-effectful-0.0.1..
+Building library for graph-effectful-0.0.1..
+[1 of 2] Compiling Graph            ( lib/Graph.hs, dist/build/Graph.o, dist/build/Graph.dyn_o )
+
+[;1mlib/Graph.hs:35:14: [;1m[31merror[0m[0m[;1m: [[;1m[31mGHC-43085[0m[0m[;1m][0m[0m[;1m
+    • Overlapping instances for State (Map a Int)
+                                :> (State (Map Int a) : State (Map a Int) : State Int : es)
+        arising from a use of ‘runNode’
+      Matching instance:
+        instance (e :> es) => e :> (x : es)
+          -- Defined in ‘Effectful.Internal.Effect’
+      Potentially matching instance:
+        instance [overlapping] e :> (e : es)
+          -- Defined in ‘Effectful.Internal.Effect’
+      (The choice depends on the instantiation of ‘a, es’
+       To pick the first instance above, use IncoherentInstances
+       when compiling the other instance declarations)
+    • In the expression: runNode a
+      In a \case alternative: Node a -> runNode a
+      In the expression: \case Node a -> runNode a[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m35 |[0m[0m     Node a → [;1m[31mrunNode[0m[0m a
+[;1m[34m   |[0m[0m[;1m[31m              ^^^^^^^[0m[0m
+[2 of 2] Compiling Paths_graph_effectful ( dist/build/autogen/Paths_graph_effectful.hs, dist/build/Paths_graph_effectful.o, dist/build/Paths_graph_effectful.dyn_o )

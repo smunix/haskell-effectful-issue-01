@@ -1,0 +1,19 @@
+inputs:
+  nixpkgs:
+    url: github:NixOS/nixpkgs/nixpkgs-unstable
+  nix-utils:
+    url: github:smunix/nix-utils
+  nix-filter:
+    url: github:numtide/nix-filter
+  effectful:
+    url: github:haskell-effectful/effectful
+    flake: false
+  optics:
+    url: github:well-typed/optics
+    flake: false
+  hls:
+    url: github:smunix/haskell-language-server?ref=smunix-patch-1
+
+  tree-diff:
+    url: github:haskellari/tree-diff
+    flake: false
